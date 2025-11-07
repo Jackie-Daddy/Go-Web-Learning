@@ -9,6 +9,7 @@ import (
 // 静态文件：html页面上用到的样式文件 .css js文件 图片
 func main() {
 	r := gin.Default()
+	r.Static("/xxx", "./statics")
 	//gin框架中给模版添加自定义函数
 	r.SetFuncMap(template.FuncMap{
 		"safe": func(str string) template.HTML {
