@@ -25,7 +25,7 @@ func initMySQL() (err error) {
 	if err != nil {
 		return
 	}
-	return DB.DB().Ping()
+	return DB.DB().Ping() //如果返回nil表示数据库连接成功且可用
 }
 
 func main() {
